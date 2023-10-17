@@ -50,3 +50,18 @@
     <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white"/>&nbsp
 </tr>
 </table>
+
+### 기술스택을 선택한 이유
+
+1. Recoil : 대규모 상태를 관리해야 하는 프로젝트에서는 redux를 사용하는 것이 좀 더 적합할 것이라고 판단함. 또한 이런 대규모 상태를 감시, 디버깅하기 위한 안정적인 devTool도 가지고 있기 때문에 안정성 면에서는 redux가 더 낫다고 생각함. <br>
+   그러나 지금 개발하는 프로젝트는 제공되는 API를 사용해서 대규모 데이터를 다루는 것도 아니고, 기한도 길지 않기 때문에 상대적으로 적은 코드를 작성하고 러닝 커브가 적은 recoil이 redux에 비해 유리하다고 생각함. <br>
+   결론적으로, 더 직관적이고 간단한 구조를 가진 recoil을 현재 프로젝트의 상태관리 라이브러리로 확정함.
+
+2. Axios : 모듈 설치를 해야한다는 단점이 존재하지만 fetch에는 없는 response timeout 처리 방법이 존재함. Promise 기반으로 만들어졌기 떄문에 데이터를 다루기에 편리함. 구형 브라우저 지원이 뛰어남.<br>
+   비동기로 http 통신이 가능하며 return을 promise 객체로 해주기 때문에 response 데이터를 다루기 쉬움
+
+3. React Router : 리액트는 Single Page Application임. 즉, 모든 컴포넌트의 변화가 하나의 페이지 안에서 일어남. 다른 URL로 이동하면 페이지 전체가 교체되는 것이 아니라 한 페이지 내부에서 컴포넌트의 변화만 일어남. 이런 환경에서 사용자는 원하는 페이지에 북마크를 할 수도 없고 히스토리가 생기지 않아 뒤로가기 기능을 사용할 수도 없음. 이러한 리액트의 단점을 react router로 보완함
+   <br>
+   react router을 사용함으로써 업데이트 된 부분만 새로 렌더링됨. 각각의 컴포넌트마다 URL이 생겼기 때문에 북마크, 히스토리 기능 사용 가능.
+   <br>
+   즉, React router는 리액트에 path를 추가해 기존의 장점을 유지하면서 단점까지 개선함
